@@ -18,12 +18,4 @@ def index():
 
 # RUN WEB APPLICATION
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
-    logging.info("Starting Waitress on 0.0.0.0:10000")
-    print("Starting Waitress on 0.0.0.0:10000")
-    try:
-        from waitress import serve
-        serve(app, host="0.0.0.0", port=10000)
-    except Exception:
-        logging.exception("Failed to start Waitress")
-        raise
+    app.run(host="0.0.0.0", port=10000, debug=True)
