@@ -1,19 +1,14 @@
-from flask import Flask, render_template_string
-import os
+from flask import Flask, redirect, url_for
 
 # INITIALISE WEB APPLICATION (use default `static/` folder)
 app = Flask(__name__)
 
-# SETUP HTML TEMPLATE
-HERE = os.path.dirname("static/pages/")
-
-with open(os.path.join(HERE, "main_page.html"), "r") as f:
-    TEMPLATE = f.read()
 
 # DEFINE ROUTES
 @app.route("/")
 def index():
-    return render_template_string(TEMPLATE)
+    # Redirect to the static HTML so its CSS is loaded directly
+    return redirect(url_for('static', filename='pages/main_page.html'))
 
 # RUN WEB APPLICATION
 if __name__ == "__main__":
