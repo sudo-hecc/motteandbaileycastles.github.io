@@ -1,7 +1,7 @@
 html { height: 100%; }
 body {
     color: #ffffff;
-    background-color: #580101;
+    background-color:#580101;
     text-align: left;
     font-family: sans-serif;
     height: 100vh;
@@ -13,6 +13,16 @@ body {
 }
 
 h1 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h3 {
     text-align: center;
     font-family: sans-serif;
 }
@@ -32,21 +42,3 @@ h1 {
     font-family: sans-serif;
 }
 .btn:hover { opacity: 0.9; }
-
-.footer-images {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 0.75rem;
-}
-
-.footer-image {
-    display: block;
-    width: calc(50% - 0.25rem);
-    height: auto;
-    object-fit: contain;
-    object-position: center bottom;
-}
