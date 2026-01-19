@@ -49,4 +49,5 @@ h1 {
     height: auto;
     object-fit: contain;
     object-position: center bottom;
+    align-self: center;
 }
